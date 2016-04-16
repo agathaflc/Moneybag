@@ -257,9 +257,18 @@ a:focus {
     }
 }
 
+.carousel-control{
+    color:#000;
+}
+
+.carousel-control a:hover {
+    color: #fff;
+}
+
 .carousel-caption{
     color: #000;
 }
+
 
 .main-text
 {
@@ -377,13 +386,8 @@ ul.banner-social-buttons {
 
 footer {
     padding: 15px 0;
-<<<<<<< HEAD
     color: #fff;
     background-color: #000;
-=======
-	background-color: #000;
-	color: #fff;
->>>>>>> master
 }
 
 footer p {
