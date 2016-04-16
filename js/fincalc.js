@@ -6,6 +6,12 @@
 * While not required, it would be much appreciated if you could link back to http://ravingroo.com
 */
 
+var myData = [];
+
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+
 function onlyNumbers(keyinput){
 	var input=keyinput.charCode? keyinput.charCode : keyinput.keyCode
 	// if key press is not a backspace, a period, or a number, then stop character input
@@ -18,52 +24,14 @@ function onlyNumbers(keyinput){
 
 function mySavings()
 {
-	/*// Reset error messages to blank
-	document.getElementById('balanceError').innerHTML = '';
-	document.getElementById('rateError').innerHTML = '';
-	document.getElementById('yearsError').innerHTML = '';*/
-
+ 	//Reset error messages to blank
 	document.getElementById('incomeError').innerHTML = '';
 	document.getElementById('rentError').innerHTML = '';
 	document.getElementById('billsError').innerHTML = '';
-	document.getElementById('servicesError').innerHTML = '';
-	document.getElementById('groceriesError').innerHTML = '';
 	document.getElementById('diningError').innerHTML = '';
+	document.getElementById('servicesError').innerHTML = '';
 	document.getElementById('entertainmentError').innerHTML = '';
 	document.getElementById('miscError').innerHTML = '';
-
-
-	/*// Form validation checking
-	if ((document.savingscalc.balance.value == null) || (document.savingscalc.balance.value.length == 0) || (isNaN(document.savingscalc.balance.value) == true))
-	{
-	document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
-	document.getElementById('balanceError').innerHTML = 'Numeric value required. Example: 10000';
-	} 
-
-	else if ((document.savingscalc.rate.value == null) || (document.savingscalc.rate.value.length == 0) || (isNaN(document.savingscalc.rate.value) == true))
-	{
-	document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
-	document.getElementById('rateError').innerHTML = 'Numeric value required. Example: 3.5';
-	} 
-
-	else if ((document.savingscalc.years.value == null) || (document.savingscalc.years.value.length == 0) || (isNaN(document.savingscalc.years.value) == true))
-	{
-	document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
-	document.getElementById('yearsError').innerHTML = 'Numeric value required. Example: 10';
-	} 
-
-	else
-	{
-	// Set variables from form data
-	var startingbalance = document.savingscalc.balance.value;
-	var interestrate = document.savingscalc.rate.value / 100;
-	var totalyears = document.savingscalc.years.value;
-	// var totalmonths = document.savingscalc.years.value * 12;
-	var compoundsperyear = 12;
-	// Calculate final savings balance and display result
-	document.getElementById('finalBalance').innerHTML = 'Final Balance: $' + (startingbalance*Math.pow((1+interestrate/compoundsperyear),(compoundsperyear*totalyears))).toFixed(2);
-	}*/
-
 
 	var errorString = '<br><h6>Numeric value required. Example: 381</h6>';
 	if ((document.savingscalc.income.value == null) || (document.savingscalc.income.value.length == 0) || (isNaN(document.savingscalc.income.value) == true))
@@ -78,17 +46,13 @@ function mySavings()
 		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
 		document.getElementById('billsError').innerHTML = errorString;
 		}
-	else if ((document.savingscalc.services.value == null) || (document.savingscalc.services.value.length == 0) || (isNaN(document.savingscalc.services.value) == true))
-		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
-		document.getElementById('servicesError').innerHTML = errorString;
-		}
-	else if ((document.savingscalc.groceries.value == null) || (document.savingscalc.groceries.value.length == 0) || (isNaN(document.savingscalc.groceries.value) == true))
-		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
-		document.getElementById('groceriesError').innerHTML = errorString;
-		}
 	else if ((document.savingscalc.dining.value == null) || (document.savingscalc.dining.value.length == 0) || (isNaN(document.savingscalc.dining.value) == true))
 		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
 		document.getElementById('diningError').innerHTML = errorString;
+		}
+	else if ((document.savingscalc.services.value == null) || (document.savingscalc.services.value.length == 0) || (isNaN(document.savingscalc.services.value) == true))
+		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
+		document.getElementById('servicesError').innerHTML = errorString;
 		}
 	else if ((document.savingscalc.entertainment.value == null) || (document.savingscalc.entertainment.value.length == 0) || (isNaN(document.savingscalc.entertainment.value) == true))
 		{document.getElementById('finalBalance').innerHTML = 'Please enter the missing information.';
@@ -100,63 +64,89 @@ function mySavings()
 		}
 	else
 	{
-		/*// Set variables from form data
-		var startingbalance = document.savingscalc.balance.value;
-		var interestrate = document.savingscalc.rate.value / 100;
-		var totalyears = document.savingscalc.years.value;
-		// var totalmonths = document.savingscalc.years.value * 12;
-		var compoundsperyear = 12;*/
-
+		//Set variables from form data
 		var income = Number(document.savingscalc.income.value);
 		var rent = Number(document.savingscalc.rent.value);
-		console.log(typeof rent);
-		var bills = Number(document.savingscalc.bills.value);
-		var services = Number(document.savingscalc.services.value);
-		var groceries = Number(document.savingscalc.groceries.value);
+
+		myData.push(["Rent", rent]);
+
+		//console.log(typeof rent);
 		var dining = Number(document.savingscalc.dining.value);
+
+		myData.push(["Food & Dining", dining]);
+
+		var bills = Number(document.savingscalc.bills.value);
+
+		myData.push(["Bills", bills]);
+
+		var services = Number(document.savingscalc.services.value);
+
+		myData.push(["Services", services]);
+
 		var entertainment = Number(document.savingscalc.entertainment.value);
+
+		myData.push(["Entertainment", entertainment]);
+
 		var misc = Number(document.savingscalc.misc.value);
 
-		document.getElementById('finalBalance').innerHTML = 'Final Balance: $' + (income - (rent+bills+services+groceries+dining+entertainment+misc));
+		myData.push(["Miscellaneous", misc]);
 
+		document.getElementById('finalBalance').innerHTML = 'Current Balance: $' + (income - (rent+bills+dining+services+entertainment+misc));
 
-		// Calculate final savings balance and display result
-		//document.getElementById('finalBalance').innerHTML = 'Final Balance: $' + (startingbalance*Math.pow((1+interestrate/compoundsperyear),(compoundsperyear*totalyears))).toFixed(2);
-		}
-
+	}
 
 }
 
 function mySavingsReset()
 {
-// Reset everything to default/null/blank
-document.getElementById('finalBalance').innerHTML = 'Values reset';
+	// Reset everything to default/null/blank
+	document.getElementById('finalBalance').innerHTML = 'Values reset';
 
-/*document.getElementById('balanceError').innerHTML = '';
-document.getElementById('rateError').innerHTML = '';
-document.getElementById('yearsError').innerHTML = '';*/
+	document.getElementById('incomeError').innerHTML = '';
+	document.getElementById('rentError').innerHTML = '';
+	document.getElementById('billsError').innerHTML = '';
+	document.getElementById('diningError').innerHTML = '';
+	document.getElementById('servicesError').innerHTML = '';
+	document.getElementById('entertainmentError').innerHTML = '';
+	document.getElementById('miscError').innerHTML = '';
 
-document.getElementById('incomeError').innerHTML = '';
-document.getElementById('rentError').innerHTML = '';
-document.getElementById('billsError').innerHTML = '';
-document.getElementById('servicesError').innerHTML = '';
-document.getElementById('groceriesError').innerHTML = '';
-document.getElementById('diningError').innerHTML = '';
-document.getElementById('entertainmentError').innerHTML = '';
-document.getElementById('miscError').innerHTML = '';
-
-/*document.savingscalc.balance.value = null;
-document.savingscalc.rate.value = null;
-document.savingscalc.years.value = null;*/
-
-document.savingscalc.income.value = null;
-document.savingscalc.rent.value = null;
-document.savingscalc.bills.value = null;
-document.savingscalc.services.value = null;
-document.savingscalc.groceries.value = null;
-document.savingscalc.dining.value = null;
-document.savingscalc.entertainment.value = null;
-document.savingscalc.misc.value = null;
-
-
+	document.savingscalc.income.value = null;
+	document.savingscalc.rent.value = null;
+	document.savingscalc.bills.value = null;
+	document.savingscalc.dining.value = null;
+	document.savingscalc.services.value = null;
+	document.savingscalc.entertainment.value = null;
+	document.savingscalc.misc.value = null;
 }
+
+
+// Load the Visualization API and the corechart package.
+google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+function drawChart() {
+
+        // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Category');
+    data.addColumn('number', 'Amount');
+    data.addRows(myData);
+
+        // Set chart options
+    var options = {'width':500,
+                   'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+}
+$('html, body').click(function() {
+        drawChart();
+      });
+
+
