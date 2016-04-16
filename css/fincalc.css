@@ -1,0 +1,19 @@
+.esc-div {
+width:450px;
+background-color: #f9f9f9;
+border:1px solid #cccccc;
+border-radius: 7px;
+padding:15px;
+}
+
+.esc-error {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 10px;
+color:#ca0000;
+}
+
+.esc-finalbalance {
+margin-top:15px;
+font-size:24px;
+color:#ca0000;
+}
