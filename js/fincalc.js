@@ -6,6 +6,8 @@
 * While not required, it would be much appreciated if you could link back to http://ravingroo.com
 */
 
+var myData = [];
+
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
@@ -65,14 +67,31 @@ function mySavings()
 		//Set variables from form data
 		var income = Number(document.savingscalc.income.value);
 		var rent = Number(document.savingscalc.rent.value);
+
+		myData.push(["Rent", rent]);
+
 		//console.log(typeof rent);
 		var dining = Number(document.savingscalc.dining.value);
+
+		myData.push(["Food & Dining", dining]);
+
 		var bills = Number(document.savingscalc.bills.value);
+
+		myData.push(["Bills", bills]);
+
 		var services = Number(document.savingscalc.services.value);
+
+		myData.push(["Services", services]);
+
 		var entertainment = Number(document.savingscalc.entertainment.value);
+
+		myData.push(["Entertainment", entertainment]);
+
 		var misc = Number(document.savingscalc.misc.value);
 
-		document.getElementById('finalBalance').innerHTML = 'Final Balance: $' + (income - (rent+bills+dining+services+entertainment+misc));
+		myData.push(["Miscellaneous", misc]);
+
+		document.getElementById('finalBalance').innerHTML = 'Current Balance: $' + (income - (rent+bills+dining+services+entertainment+misc));
 
 	}
 
@@ -99,3 +118,35 @@ function mySavingsReset()
 	document.savingscalc.entertainment.value = null;
 	document.savingscalc.misc.value = null;
 }
+
+
+// Load the Visualization API and the corechart package.
+google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+function drawChart() {
+
+        // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Category');
+    data.addColumn('number', 'Amount');
+    data.addRows(myData);
+
+        // Set chart options
+    var options = {'width':500,
+                   'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+}
+$('html, body').click(function() {
+        drawChart();
+      });
+
+
