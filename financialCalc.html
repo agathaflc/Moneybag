@@ -41,8 +41,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+                <a class="navbar-brand page-scroll" href="#page-top"> <span class="light">$.getMONEY()</span>
                 </a>
             </div>
 
@@ -74,49 +73,29 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Savings Calculator</h2>
-                <p>Catered towards students.</p>
 
                 <div class="esc-div">
                     <form name=savingscalc method=POST>
 
-                        <p>Monthly Income<br>
+                        <p>Monthly Income <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="How much you earn in one month."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=income size=10> <span class="esc-error" id="incomeError"></span></p>
-                        <p>Rent<br>
+
+                        <p>Rent <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="How much you pay for rent."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=rent size=10> <span class="esc-error" id="rentError"></span></p>
-                        <p>Bills <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Bills include (but are not limited to): phone, gas, electric, water, and Internet."><span class="glyphicon glyphicon-info-sign"></span></button><br>
+
+                        <p>Bills <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Phone, gas, electric, water, Internet, etc."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=bills size=10> <span class="esc-error" id="billsError"></span></p>
-                        <p>Services<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=services size=10> <span class="esc-error" id="servicesError"></span></p>
-                        <p>Groceries<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=groceries size=10> <span class="esc-error" id="groceriesError"></span></p>
-                        <p>Dining Out Cost<br>
+
+                        <p>Food & Dining <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Fast food, restaurants, and groceries."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=dining size=10> <span class="esc-error" id="diningError"></span></p>
-                        <p>Entertainment Cost<br>
 
-                        <!-- <p>What is your starting balance?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=balance size=10> <span class="esc-error" id="balanceError"></span></p>
-                        <p>What is the interest rate?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=rate size=5> <span class="esc-error" id="rateError"></span></p>
-                        <p>How many years?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=years size=5> <span class="esc-error" id="yearsError"></span></p>
- -->
-
-                        <p>What is your income for this month?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=income size=10> <span class="esc-error" id="incomeError"></span></p>
-                        <p>How much is your rent?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=rent size=10> <span class="esc-error" id="rentError"></span></p>
-                        <p>How much are your bills?<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=bills size=10> <span class="esc-error" id="billsError"></span></p>
-                        <p>Did you pay for any services?<br>
+                        <p>Services <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Eye exam, doctor's visit, shoe repair, etc"><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=services size=10> <span class="esc-error" id="servicesError"></span></p>
-                        <p>Groceries<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=groceries size=10> <span class="esc-error" id="groceriesError"></span></p>
-                        <p>Dining out cost<br>
-                        <input type=text onkeypress="return onlyNumbers(event)" name=dining size=10> <span class="esc-error" id="diningError"></span></p>
-                        <p>Entertainment cost<br>
-
+                        
+                        <p>Entertainment <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Karaoke, shopping, going to the movies, etc."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=entertainment size=10> <span class="esc-error" id="entertainmentError"></span></p>
-                        <p>Miscellaneous<br>
+
+                        <p>Miscellaneous <button type="button" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Everything else not included in the categories above."><span class="glyphicon glyphicon-info-sign"></span></button><br>
                         <input type=text onkeypress="return onlyNumbers(event)" name=misc size=10> <span class="esc-error" id="miscError"></span></p>
 
                         <!-- Calculate/Reset button -->
