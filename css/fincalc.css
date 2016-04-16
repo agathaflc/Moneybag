@@ -17,3 +17,7 @@ margin-top:15px;
 font-size:24px;
 color:#ca0000;
 }
+
+input {
+	text-align: center;
+}
