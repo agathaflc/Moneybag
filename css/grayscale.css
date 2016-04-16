@@ -275,15 +275,16 @@ a:focus {
 }
 .btn-clear
 {
-    color: #000;
-    background-color: transparent;
+    color: #fff;
+    background-color: #000;
     border-color: #FFF;
     margin-right: 15px;
 }
 .btn-clear:hover
 {
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
+	border-color: #000;
 }
 
 
@@ -376,8 +377,13 @@ ul.banner-social-buttons {
 
 footer {
     padding: 15px 0;
+<<<<<<< HEAD
     color: #fff;
     background-color: #000;
+=======
+	background-color: #000;
+	color: #fff;
+>>>>>>> master
 }
 
 footer p {
