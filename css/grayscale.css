@@ -168,6 +168,10 @@ a:focus {
     font-size: 18px;
 }
 
+#Carsouel1 p{text-align:left:}
+
+
+
 @media(min-width:768px) {
     .intro {
         height: 100%;
