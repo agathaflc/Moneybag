@@ -257,6 +257,19 @@ a:focus {
     }
 }
 
+.carousel-control{
+    color:#000;
+}
+
+.carousel-control a:hover {
+    color: #fff;
+}
+
+.carousel-caption{
+    color: #000;
+}
+
+
 .main-text
 {
     position: absolute;
@@ -288,7 +301,8 @@ a:focus {
 
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
 .download-section {
@@ -372,8 +386,8 @@ ul.banner-social-buttons {
 
 footer {
     padding: 15px 0;
-	background-color: #000;
-	color: #fff;
+    color: #fff;
+    background-color: #000;
 }
 
 footer p {
