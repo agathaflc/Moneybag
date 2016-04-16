@@ -257,96 +257,11 @@ a:focus {
     }
 }
 
-/*carousel from https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/gh-pages/css/full-slider.css*/
-/*
-header.carousel,
-.item,
-.active,
-.img {
-    max-width: 100%;
-    
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.carousel-inner {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}*/
-
-/* Background images are set within the HTML using inline CSS, not here */
-/*
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-/*carousel from https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/gh-pages/css/full-slider.css ends here*/
-
-/*title from http://codepen.io/crashy/pen/JoKMgG */
-/*
-.title {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  text-shadow: 2px 2px #000;
-  color: #FFF;
-}
-
-/*title ends here*/
-
-/*
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }*/
-  
- /* Home Page Carousel */
-
-header.carousel-slide {
-    width: 120%;
-}
-
-header.container .row .col-md-12 .carousel-slide .item,
-header.container .row .col-md-12 .carousel-slide .item.active .img,
-header.container .row .col-md-12 .carousel-slide .carousel-inner,
-header.container .row .col-md-12 .carousel-slide .carousel-inner .active .img {
-    width: 120%;
-	height: 50%;
-    background-position: center;
-    background-size: cover;
-}
-/*
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}*/
-
 .main-text
 {
     position: absolute;
     top: 50px;
-    width: 100%;
+    width: 96.66666666666666%;
     color: #FFF;
 }
 .btn-min-block
@@ -366,6 +281,9 @@ header.carousel .fill {
     color: #000;
     background-color: #FFF;
 }
+
+
+
 
 
 .content-section {
