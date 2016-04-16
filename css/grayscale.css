@@ -8,8 +8,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
 }
 
 html {
@@ -146,9 +146,9 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: #000;
+    color: #000;
+    /*background: url(https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f65cd2b66fad383a51152ce6dbecbb09) no-repeat bottom center scroll;*/
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -257,96 +257,11 @@ a:focus {
     }
 }
 
-/*carousel from https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/gh-pages/css/full-slider.css*/
-/*
-header.carousel,
-.item,
-.active,
-.img {
-    max-width: 100%;
-    
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.carousel-inner {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}*/
-
-/* Background images are set within the HTML using inline CSS, not here */
-/*
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-/*carousel from https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/gh-pages/css/full-slider.css ends here*/
-
-/*title from http://codepen.io/crashy/pen/JoKMgG */
-/*
-.title {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  text-shadow: 2px 2px #000;
-  color: #FFF;
-}
-
-/*title ends here*/
-
-/*
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }*/
-  
- /* Home Page Carousel */
-
-header.carousel-slide {
-    width: 120%;
-}
-
-header.container .row .col-md-12 .carousel-slide .item,
-header.container .row .col-md-12 .carousel-slide .item.active .img,
-header.container .row .col-md-12 .carousel-slide .carousel-inner .fill,
-header.container .row .col-md-12 .carousel-slide .carousel-inner .active .img {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-/*
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}*/
-
 .main-text
 {
     position: absolute;
-    top: 200px;
-    width: 100%;
+    top: 50px;
+    width: 96.66666666666666%;
     color: #FFF;
 }
 .btn-min-block
@@ -366,6 +281,9 @@ header.carousel .fill {
     color: #000;
     background-color: #FFF;
 }
+
+
+
 
 
 .content-section {
@@ -481,4 +399,25 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+
+.item:nth-child(1) {
+    background: url(https://images.unsplash.com/photo-1459257831348-f0cdd359235f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f65cd2b66fad383a51152ce6dbecbb09) no-repeat center center fixed;
+}
+.item:nth-child(2) {
+    background: url(https://images.unsplash.com/photo-1444256386816-4fa3d3d18870?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=47229b08fd438fc917985383c6cd7f0d) no-repeat center center fixed;
+}
+.item:nth-child(3) {
+    background: url(https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=42689ecb42b1d503e16a9d8764cb8385) no-repeat center center fixed;
 }
