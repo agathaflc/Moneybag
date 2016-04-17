@@ -92,7 +92,7 @@
                 <h3>Questionnaire</h3>
                 <p>Answer these questions, so we can determine your investment portfolio!</p>
 
-                1. What is the primary reason you’re investing?
+                <b>1. What is the primary reason you’re investing?</b><br>
 
                 <div class="radio">
                   <label>
@@ -125,73 +125,73 @@
                   </label>
                 </div>
 
-                2. What is your yearly income?
+                <b>2. What is your yearly income?</b><br>
 
                 <div class="radio">
                   <label>
                     <input type="radio" name="question2" id="question2a" value="" unchecked>
-                    Less than 25,000
+                    Less than $25,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question2" id="question2b" value="" unchecked>
-                    25,000-50,000
+                    $25,000-$50,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question2" id="question2c" value="" unchecked>
-                    50,000-100,000
+                    $50,000-$100,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question2" id="question2d" value="" unchecked>
-                    100,000-250,000
+                    $100,000-$250,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question2" id="question2e" value="" unchecked>
-                    250,000+
+                    $250,000+ HKD
                   </label>
                 </div>
 
-                3. What is your current net worth?
+                <b>3. What is your current net worth?</b><br>
 
                 <div class="radio">
                   <label>
                     <input type="radio" name="question3" id="question3a" value="" unchecked>
-                    Less than 10,000
+                    Less than $10,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question3" id="question3b" value="" unchecked>
-                    10,000-50,000
+                    $10,000-$50,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question3" id="question3c" value="" unchecked>
-                    50,000-10,000
+                    $50,000-$100,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question3" id="question3d" value="" unchecked>
-                    100,000-250,000
+                    $100,000-$250,000 HKD
                   </label>
                 </div>
                 <div class="radio">
                   <label>
                     <input type="radio" name="question3" id="question3e" value="" unchecked>
-                    250,000+
+                    $250,000+ HKD
                   </label>
                 </div>
 
-                4. Are you employed?
+                <b>4. Are you employed?</b><br>
 
                 <div class="radio">
                   <label>
@@ -230,7 +230,7 @@
                   </label>
                 </div>
 
-                5. What is your investment timeline?
+                <b>5. What is your investment timeline?</b><br>
 
                 <div class="radio">
                   <label>
@@ -264,7 +264,7 @@
                 </div>
 
                 <script>
-                    var question1 = document.querySelector('input[name = "question1"]:checked').value;
+                /*    var question1 = document.querySelector('input[name = "question1"]:checked').value;
                     var question2 = document.querySelector('input[name = "question2"]:checked').value;
                     var question3 = document.querySelector('input[name = "question3"]:checked').value;
                     var question4 = document.querySelector('input[name = "question4"]:checked').value;
@@ -276,10 +276,10 @@
                     // error message here
                     randType = "You skipped a question!";
                 }
-                else {
+                else {*/
                     portfolioType = ["Conservative", "Moderately Conservative", "Moderate", "Moderately Aggressive", "Aggressive"];
                     var randType = portfolioType[Math.floor(Math.random() * portfolioType.length)];
-                }
+                
                 </script>
 
                 <button onclick="window.alert(randType)">Calculate</button>
