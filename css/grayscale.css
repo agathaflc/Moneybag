@@ -266,14 +266,14 @@ a:focus {
 }
 
 .carousel-caption{
-    color: #000;
+    color: #fff;
     position: absolute;
     top: 10%;
     height: 100%;
 }
 
 .carousel-caption p {
-    text-shadow: 1px 1px #fff;
+    text-shadow: 1px 1px #000;
 }
 
 
