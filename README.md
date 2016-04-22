@@ -11,4 +11,5 @@ Moneybag is the easiest way to learn about investment and the most practical per
 ## Creators
 
 Felicia Agatha, Jenny Huang, and Gracia Monica
+
 Team name: $.addMoney()
